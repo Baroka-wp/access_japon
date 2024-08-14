@@ -49,6 +49,33 @@ body, html {
         repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.1) 5px, rgba(0,0,0,0.1) 10px);
     opacity: 0.1;
     z-index: -1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    background-color: #FF4B4B;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero::before {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 10%;
+    left: 5%;
+}
+
+.hero::after {
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    bottom: 15%;
+    right: 10%;
 }
 .hero-content {
     max-width: 1000px;
@@ -444,6 +471,7 @@ nav ul li a:hover, nav ul li a.active {
     flex-wrap: wrap;
     padding: 0 20px;
 }
+
 .footer-section {
     flex: 1;
     min-width: 250px;
@@ -826,3 +854,37 @@ nav ul li a:hover, nav ul li a.active {
       box-shadow: inset 0px 0px 0px 30px #28a745;
     }
   }
+
+  .language-switcher {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+
+.language-switcher button {
+    margin-left: 0;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #FF4B4B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+    }
+
+    .language-switcher button {
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+}
