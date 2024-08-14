@@ -34,6 +34,9 @@ body, html {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background-image: url("./images/rm309-adj-05.jpg");
+    background-size: cover;
+    background-position: 100%;
 }
 .hero::before {
     content: "";

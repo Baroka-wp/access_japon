@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Home Stay - Collaboration Afrique-Japon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home-stay-styles.css">
+</head>
+<body>
+    <div class="header">
+        <nav id="mainNav">
+            <a href="./index.html" class="logo">AFRICA・日本</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="./index.html#hero" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="./index.html#presentation" data-i18n="nav.presentation">Présentation</a></li>
+                <li><a href="./index.html#join-us" data-i18n="nav.join-us">Rejoignez-nous</a></li>
+                <li><a href="./index.html#team" data-i18n="nav.team">L'équipe</a></li>
+                <li><a href="./index.html#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="home-stay-hero">
+        <h1 data-i18n="home-stay.title">Programme Home Stay</h1>
+        <p data-i18n="home-stay.subtitle">Échange culturel entre l'Afrique et le Japon</p>
+    </div>
+
+    <div class="home-stay-content">
+        <section class="home-stay-section">
+            <h2 data-i18n="about.title">À propos du programme</h2>
+            <p data-i18n="about.description">Le programme Home Stay est une initiative unique qui vise à promouvoir l'échange culturel et linguistique entre l'Afrique et le Japon. Il offre deux opportunités principales : devenir volontaire pour enseigner la langue et la culture japonaise en Afrique, ou devenir hôte pour accueillir des participants japonais.</p>
+        </section>
+
+        <div class="toggle-menu">
+            <button class="toggle-button active" data-target="volunteers" data-i18n="toggle.volunteers">Pour les volontaires japonais</button>
+            <button class="toggle-button" data-target="hosts" data-i18n="toggle.hosts">Pour les hôtes africains</button>
+        </div>
+
+        <div id="volunteers" class="toggle-content active">
+            <h3>Conditions</h3>
+            <ul>
+                <li>Être de nationalité japonaise ou résident permanent au Japon</li>
+                <li>Avoir au moins 20 ans</li>
+                <li>Parler couramment japonais</li>
+                <li>Avoir un intérêt pour l'enseignement et la culture africaine</li>
+                <li>Être disponible pour un séjour de 3 à 12 mois</li>
+            </ul>
+            <h3>Processus</h3>
+            <ol>
+                <li>Soumission de la candidature en ligne</li>
+                <li>Entretien initial (en ligne)</li>
+                <li>Formation pré-départ</li>
+                <li>Placement dans une famille d'accueil africaine</li>
+                <li>Suivi et soutien pendant le séjour</li>
+            </ol>
+            <button class="apply-button" id="openVolunteerModal">Postuler comme volontaire</button>
+        </div>
+
+        <div id="hosts" class="toggle-content">
+            <h3>Conditions</h3>
+            <ul>
+                <li>Être une famille ou un individu résidant en Afrique</li>
+                <li>Avoir un espace adéquat pour accueillir un invité</li>
+                <li>Être intéressé par la culture japonaise</li>
+                <li>Être prêt à s'engager pour une période de 3 à 12 mois</li>
+            </ul>
+            <h3>Processus</h3>
+            <ol>
+                <li>Soumission de la candidature en ligne</li>
+                <li>Visite et évaluation du domicile</li>
+                <li>Formation sur l'accueil interculturel</li>
+                <li>Jumelage avec un volontaire japonais</li>
+                <li>Accueil du volontaire et suivi régulier</li>
+            </ol>
+        <button href="#" class="apply-button" id="openHostModal">Devenir famille d'accueil</button>
+        </div>
+
+        <section class="home-stay-section">
+            <h2 data-i18n="advantages.title">Avantages du programme</h2>
+            <ul class="advantages-list">
+                <li><i data-lucide="globe-2"></i> <span data-i18n="advantages.cultural">Immersion culturelle profonde</span></li>
+                <li><i data-lucide="message-square"></i> <span data-i18n="advantages.language">Apprentissage linguistique intensif</span></li>
+                <li><i data-lucide="users"></i> <span data-i18n="advantages.network">Création de liens internationaux durables</span></li>
+                <li><i data-lucide="trending-up"></i> <span data-i18n="advantages.development">Développement personnel et professionnel</span></li>
+                <li><i data-lucide="heart"></i> <span data-i18n="advantages.collaboration">Contribution au rapprochement Afrique-Japon</span></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Formulaire pour les volontaires -->
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="volunteerForm" class="multi-step-form">
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step" data-step="3">3</div>
+                    <div class="step" data-step="4">4</div>
+                </div>
+    
+                <div class="form-step active" data-step="1">
+                    <h3 data-i18n="volunteer.personalInfo">Informations personnelles</h3>
+                    <div class="form-group">
+                        <label for="volunteerName" data-i18n="volunteer.name">Nom complet</label>
+                        <input type="text" id="volunteerName" name="volunteerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerBirthdate" data-i18n="volunteer.birthdate">Date de naissance</label>
+                        <input type="date" id="volunteerBirthdate" name="volunteerBirthdate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerNationality" data-i18n="volunteer.nationality">Nationalité</label>
+                        <input type="text" id="volunteerNationality" name="volunteerNationality" required>
+                    </div>
+                </div>
+    
+                <div class="form-step" data-step="2">
+                    <h3 data-i18n="volunteer.languageSkills">Compétences linguistiques</h3>
+                    <div class="form-group">
+                        <label for="volunteerJapaneseLevel" data-i18n="volunteer.japaneseLevel">Niveau de japonais</label>
+                        <select id="volunteerJapaneseLevel" name="volunteerJapaneseLevel" required>
+                            <option value="" data-i18n="volunteer.selectLevel">Sélectionnez votre niveau</option>
+                            <option value="native" data-i18n="volunteer.nativeLevel">Langue maternelle</option>
+                            <option value="fluent" data-i18n="volunteer.fluentLevel">Courant</option>
+                            <option value="advanced" data-i18n="volunteer.advancedLevel">Avancé</option>
+                            <option value="intermediate" data-i18n="volunteer.intermediateLevel">Intermédiaire</option>
+                            <option value="beginner" data-i18n="volunteer.beginnerLevel">Débutant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerOtherLanguages" data-i18n="volunteer.otherLanguages">Autres langues parlées</label>
+                        <input type="text" id="volunteerOtherLanguages" name="volunteerOtherLanguages">
+                    </div>
+                </div>
+    
+                <div class="form-step" data-step="3">
+                    <h3 data-i18n="volunteer.experienceMotivation">Expérience et motivation</h3>
+                    <div class="form-group">
+                        <label for="volunteerExperience" data-i18n="volunteer.teachingExperience">Expérience d'enseignement ou de bénévolat</label>
+                        <textarea id="volunteerExperience" name="volunteerExperience" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerMotivation" data-i18n="volunteer.programMotivation">Motivation pour participer au programme</label>
+                        <textarea id="volunteerMotivation" name="volunteerMotivation" rows="4" required></textarea>
+                    </div>
+                </div>
+    
+                <div class="form-step" data-step="4">
+                    <h3 data-i18n="volunteer.contactInfo">Coordonnées</h3>
+                    <div class="form-group">
+                        <label for="volunteerEmail" data-i18n="volunteer.email">Email</label>
+                        <input type="email" id="volunteerEmail" name="volunteerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerPhone" data-i18n="volunteer.phone">Téléphone</label>
+                        <input type="tel" id="volunteerPhone" name="volunteerPhone" required>
+                    </div>
+                </div>
+    
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" id="volunteerPrevBtn" data-i18n="form.previous">Précédent</button>
+                    <button type="button" class="btn btn-primary" id="volunteerNextBtn" data-i18n="form.next">Suivant</button>
+                    <button type="submit" class="btn btn-success" id="volunteerSubmitBtn" style="display: none;" data-i18n="form.submit">Soumettre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulaire pour les hôtes -->
+    <div id="hostModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="hostForm" class="multi-step-form">
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step" data-step="3">3</div>
+                    <div class="step" data-step="4">4</div>
+                </div>
+
+                <div class="form-step active" data-step="1">
+                    <h3>Informations sur la famille d'accueil</h3>
+                    <div class="form-group">
+                        <label for="hostName">Nom de famille</label>
+                        <input type="text" id="hostName" name="hostName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostCountry">Pays</label>
+                        <input type="text" id="hostCountry" name="hostCountry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostCity">Ville</label>
+                        <input type="text" id="hostCity" name="hostCity" required>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="2">
+                    <h3>Composition de la famille</h3>
+                    <div class="form-group">
+                        <label for="hostFamilyMembers">Nombre de membres de la famille</label>
+                        <input type="number" id="hostFamilyMembers" name="hostFamilyMembers" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostAccommodation">Type de logement</label>
+                        <select id="hostAccommodation" name="hostAccommodation" required>
+                            <option value="">Sélectionnez le type de logement</option>
+                            <option value="house">Maison</option>
+                            <option value="apartment">Appartement</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="3">
+                    <h3>Expérience et intérêts</h3>
+                    <div class="form-group">
+                        <label for="hostExperience">Expérience d'accueil précédente</label>
+                        <textarea id="hostExperience" name="hostExperience" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostInterests">Intérêts pour la culture japonaise</label>
+                        <textarea id="hostInterests" name="hostInterests" rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="4">
+                    <h3>Coordonnées</h3>
+                    <div class="form-group">
+                        <label for="hostEmail">Email</label>
+                        <input type="email" id="hostEmail" name="hostEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostPhone">Téléphone</label>
+                        <input type="tel" id="hostPhone" name="hostPhone" required>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" id="hostPrevBtn">Précédent</button>
+                    <button type="button" class="btn btn-primary" id="hostNextBtn">Suivant</button>
+                    <button type="submit" class="btn btn-success" id="hostSubmitBtn" style="display: none;">Soumettre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <span class="close">&times;</span>
+            <div class="success-message">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <h2 data-i18n="success.title">Inscription réussie !</h2>
+                <p data-i18n="success.message">Merci pour votre inscription. Nous vous contacterons bientôt avec plus d'informations.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-i18n="footer.contact">Contactez-nous</h4>
+                <p>
+                    <a href="mailto:contact@benin-japon.com">
+                        <i data-lucide="mail" class="contact-icon" color="#FF4B4B" size="18"></i>
+                        contact@benin-japon.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://wa.me/22967153974" target="_blank">
+                        <i data-lucide="message-circle" class="contact-icon" color="#FF4B4B" size="18"></i>
+                        +229 67 15 39 74
+                    </a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer.headquarters">Notre Siège</h4>
+                <p>
+                    <i data-lucide="map-pin" class="contact-icon" color="#FF4B4B" size="18"></i>
+                    Immeuble N’DAH. Aldo. Route Tankpe Abomey-Calavi, Benin
+                </p>
+                <p>Cotonou, Bénin</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer.follow-us">Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook" color="white" size="20"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" color="white" size="20"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" color="white" size="20"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.rights">&copy; 2024 Collaboration Bénin-Japon. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="home-stay.js"></script>
+</body>
+</html>

@@ -18,11 +18,11 @@
                 <span class="bar"></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#hero" data-i18n="nav.home">Accueil</a></li>
-                <li><a href="#presentation" data-i18n="nav.presentation">Présentation</a></li>
-                <li><a href="#join-us" data-i18n="nav.join-us">Rejoignez-nous</a></li>
-                <li><a href="#team" data-i18n="nav.team">L'équipe</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="./index.html#hero" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="./index.html#presentation" data-i18n="nav.presentation">Présentation</a></li>
+                <li><a href="./index.html#join-us" data-i18n="nav.join-us">Rejoignez-nous</a></li>
+                <li><a href="./index.html#team" data-i18n="nav.team">L'équipe</a></li>
+                <li><a href="./index.html#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -75,7 +75,7 @@
         <div class="shape square"></div>
         <div class="shape circle"></div>
         <div class="join-us-content">
-            <h2 data-i18n="join-us.title">Rejoignez-nous</h2>
+            <h2 data-i18n="join-us.title">S'inscrire aux cours de langue Japonaise</h2>
             <p data-i18n="join-us.description">Devenez partie intégrante de cette collaboration unique entre le Bénin et le Japon. Développez vos compétences en TIC et en langue japonaise, et ouvrez-vous à de nouvelles opportunités professionnelles.</p>
             <button id="openModalBtn" class="btn btn-primary" data-i18n="join-us.button">S'inscrire maintenant</button>
         </div>
@@ -85,7 +85,7 @@
           <span class="close">&times;</span>
           <section id="inscription" class="section">
             <div class="container">
-              <h2>Formulaire d'inscription</h2>
+                <h2 data-i18n="form.title">Formulaire d'inscription</h2>
               <div class="step-indicator">
                 <div class="step active" data-step="1">1</div>
                 <div class="step" data-step="2">2</div>
@@ -97,83 +97,81 @@
                 <div class="form-step" data-step="1">
                 <h3>Informations personnelles</h3>
                 <div class="form-group">
-                    <label for="nom">Nom</label>
+                    <label for="nom" data-i18n="volunteer.name">Nom</label>
                     <input type="text" id="nom" name="nom" required>
                 </div>
                 <div class="form-group">
-                    <label for="prenom">Prénom</label>
+                    <label for="prenom" data-i18n="volunteer.lastname">Prénom</label>
                     <input type="text" id="prenom" name="prenom" required>
                 </div>
                 <div class="form-group">
-                    <label for="date">Date de naissance</label>
+                    <label for="date" data-i18n="volunteer.birthdate">Date de naissance</label>
                     <input type="date" id="date" name="date" required>
                 </div>
                 </div>
 
-                <!-- Étape 2 : Informations académiques -->
+               <!-- Étape 2 : Informations académiques -->
                 <div class="form-step" data-step="2">
-                <h3>Informations académiques</h3>
-                <div class="form-group">
-                    <label for="formation">Formation</label>
-                    <input type="text" id="formation" name="formation" required>
-                </div>
-                <div class="form-group">
-                    <label for="ecole">École</label>
-                    <input type="text" id="ecole" name="ecole" required>
-                </div>
+                    <h3 data-i18n="volunteer.academicInfo">Informations académiques</h3>
+                    <div class="form-group">
+                        <label for="formation" data-i18n="volunteer.education">Formation</label>
+                        <input type="text" id="formation" name="formation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ecole" data-i18n="volunteer.school">École</label>
+                        <input type="text" id="ecole" name="ecole" required>
+                    </div>
                 </div>
 
                 <!-- Étape 3 : Coordonnées -->
                 <div class="form-step" data-step="3">
-                <h3>Coordonnées</h3>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone" required>
-                </div>
-                <div class="form-group">
-                    <label for="whatsapp">WhatsApp</label>
-                    <input type="tel" id="whatsapp" name="whatsapp">
-                </div>
+                    <h3 data-i18n="volunteer.contactInfo">Coordonnées</h3>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone" data-i18n="volunteer.phone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp">
+                    </div>
                 </div>
 
                 <!-- Étape 4 : Motivation -->
                 <div class="form-step" data-step="4">
-                <h3>Motivation</h3>
-                <div class="form-group">
-                    <label for="motivation">Pourquoi souhaitez-vous participer à ce programme ?</label>
-                    <textarea id="motivation" name="motivation" rows="5" required></textarea>
+                    <h3 data-i18n="volunteer.motivation">Motivation</h3>
+                    <div class="form-group">
+                        <label for="motivation" data-i18n="volunteer.motivationQuestion">Pourquoi souhaitez-vous participer à ce programme ?</label>
+                        <textarea id="motivation" name="motivation" rows="5" required></textarea>
+                    </div>
                 </div>
-                </div>
-
                 <!-- Navigation des étapes -->
                 <div class="form-navigation">
-                <button type="button" id="prevBtn" class="btn btn-secondary">Précédent</button>
-                <button type="button" id="nextBtn" class="btn btn-primary">Suivant</button>
-                <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">Soumettre</button>
+                    <button type="button" id="prevBtn" class="btn btn-secondary" data-i18n="form.previous">Précédent</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary" data-i18n="form.next">Suivant</button>
+                    <button type="submit" id="submitBtn" class="btn btn-success" data-i18n="form.submit" style="display: none;">Soumettre</button>
                 </div>
             </form>
         </div>
       </section>
     </div>
-</div>
-<!-- Modale de succès -->
-<div id="successModal" class="modal">
-    <div class="modal-content success-content">
-      <span class="close">&times;</span>
-      <div class="success-message">
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-        </svg>
-        <h2>Inscription réussie !</h2>
-        <p>Merci pour votre inscription. Nous vous contacterons bientôt avec plus d'informations.</p>
-      </div>
     </div>
-  </div>
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <span class="close">&times;</span>
+            <div class="success-message">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <h2 data-i18n="success.title">Inscription réussie !</h2>
+                <p data-i18n="success.message">Merci pour votre inscription. Nous vous contacterons bientôt avec plus d'informations.</p>
+            </div>
+        </div>
+    </div>
     <section id="team" class="team-section">
         <h2 data-i18n="team.title">Notre Équipe</h2>
         <div class="team-members">
@@ -199,11 +197,11 @@
         <div class="shape square"></div>
         <div class="shape circle"></div>
         <div class="join-us-content">
-            <h2>Rejoindre l'équipe</h2>
-            <p>Si vous êtes un locuteur natif du japonais et que vous souhaitez aider les jeunes béninois à améliorer leurs compétences linguistiques, nous vous invitons à postuler pour devenir un bénévole au sein de notre projet.</p>
-            <button id="volunteerBtn" class="btn btn-primary">Postuler maintenant</button>
+            <h2 data-i18n="volunteers.title">Découvrir notre programme Home Stay</h2>
+            <p data-i18n="volunteers.description">Le programme Home Stay est un programme d'échange culturel et linguistique entre l'Afrique et le Japon. Si vous êtes passionné par la culture et la langue japonaises, ou si vous êtes un locuteur natif du japonais et que vous souhaitez partager vos connaissances avec des jeunes Africains, nous vous invitons à en savoir plus sur notre programme.</p>
+            <a id="volunteerBtn" class="btn btn-primary" data-i18n="volunteers.button" href="./home-stay.html">En savoir plus</a>
         </div>
-    </section>    
+    </section>
     
     <footer id="contact" class="footer">
         <div class="footer-content">
