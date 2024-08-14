@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaboration Bénin-Japon : Formation en Langue Japonaise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <nav id="mainNav">
+            <a href="#" class="logo">BENIN・日本</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#join-us">Rejoignez-nous</a></li>
+                <li><a href="#team">L'équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="hero" class="hero">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="hero-content">
+            <h1>ベナン・日本 コラボレーション</h1>
+            <p class="subtitle">Formation en Langue Japonaise pour les Jeunes Béninois en TIC</p>
+        </div>
+        <div class="japanese-pattern"></div>
+    </div>
+
+    <section id="presentation" class="project-presentation">
+        <div class="project-grid">
+            <div class="project-block">
+                <div class="icon-container">
+                    <i data-lucide="book-open" color="white" size="60"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Formation Intensive</h3>
+                    <p>Programme de langue japonaise conçu spécifiquement pour les professionnels des TIC.</p>
+                </div>
+            </div>
+            <div class="project-block">
+                <div class="icon-container">
+                    <i data-lucide="users" color="white" size="60"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Échange Culturel</h3>
+                    <p>Immersion dans la culture japonaise à travers des ateliers et des échanges professionnels.</p>
+                </div>
+            </div>
+            <div class="project-block">
+                <div class="icon-container">
+                    <i data-lucide="briefcase" color="white" size="60"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Opportunités Professionnelles</h3>
+                    <p>Accès à des stages et des opportunités d'emploi dans des entreprises japonaises de technologie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="join-us" class="join-us-section">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+        <div class="join-us-content">
+            <h2>Rejoignez-nous</h2>
+            <p>Devenez partie intégrante de cette collaboration unique entre le Bénin et le Japon. Développez vos compétences en TIC et en langue japonaise, et ouvrez-vous à de nouvelles opportunités professionnelles.</p>
+            <button id="openModalBtn" class="btn btn-primary">S'inscrire maintenant</button>
+        </div>
+    </section>
+    <div id="inscriptionModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section id="inscription" class="section">
+            <div class="container">
+              <h2>Formulaire d'inscription</h2>
+              <div class="step-indicator">
+                <div class="step active" data-step="1">1</div>
+                <div class="step" data-step="2">2</div>
+                <div class="step" data-step="3">3</div>
+                <div class="step" data-step="4">4</div>
+              </div>
+              <form id="inscriptionForm" class="multi-step-form">
+                <!-- Étape 1 : Informations personnelles -->
+                <div class="form-step" data-step="1">
+                <h3>Informations personnelles</h3>
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date de naissance</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                </div>
+        
+                <!-- Étape 2 : Informations académiques -->
+                <div class="form-step" data-step="2">
+                <h3>Informations académiques</h3>
+                <div class="form-group">
+                    <label for="formation">Formation</label>
+                    <input type="text" id="formation" name="formation" required>
+                </div>
+                <div class="form-group">
+                    <label for="ecole">École</label>
+                    <input type="text" id="ecole" name="ecole" required>
+                </div>
+                </div>
+        
+                <!-- Étape 3 : Coordonnées -->
+                <div class="form-step" data-step="3">
+                <h3>Coordonnées</h3>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp">
+                </div>
+                </div>
+        
+                <!-- Étape 4 : Motivation -->
+                <div class="form-step" data-step="4">
+                <h3>Motivation</h3>
+                <div class="form-group">
+                    <label for="motivation">Pourquoi souhaitez-vous participer à ce programme ?</label>
+                    <textarea id="motivation" name="motivation" rows="5" required></textarea>
+                </div>
+                </div>
+        
+                <!-- Navigation des étapes -->
+                <div class="form-navigation">
+                <button type="button" id="prevBtn" class="btn btn-secondary">Précédent</button>
+                <button type="button" id="nextBtn" class="btn btn-primary">Suivant</button>
+                <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">Soumettre</button>
+                </div>
+            </form>
+        </div>
+      </section>
+    </div>
+</div>
+<!-- Modale de succès -->
+<div id="successModal" class="modal">
+    <div class="modal-content success-content">
+      <span class="close">&times;</span>
+      <div class="success-message">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <h2>Inscription réussie !</h2>
+        <p>Merci pour votre inscription. Nous vous contacterons bientôt avec plus d'informations.</p>
+      </div>
+    </div>
+  </div>
+    <section id="team" class="team-section">
+        <h2>Notre Équipe</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="./images/money-tree.jpg" alt="Membre de l'équipe 1">
+                <h3>Akiko Tanaka</h3>
+                <p>Correspondante Japonaise</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/david.jpg" alt="Membre de l'équipe 2">
+                <h3>David Kpondehou</h3>
+                <p>Président de la Diasporat Africaine au Japon</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/baroka.jpeg" alt="Membre de l'équipe 3">
+                <h3>Irotori Baroka</h3>
+                <p>Coordanateur du projet au Bénin</p>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contactez-nous</h4>
+                <p>
+                    <a href="mailto:contact@benin-japon.com">
+                        <i data-lucide="mail" class="contact-icon" color="#FF4B4B" size="18"></i>
+                        contact@benin-japon.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://wa.me/22967153974" target="_blank">
+                        <i data-lucide="message-circle" class="contact-icon" color="#FF4B4B" size="18"></i>
+                        +229 67 15 39 74
+                    </a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Notre Siège</h4>
+                <p>
+                    <i data-lucide="map-pin" class="contact-icon" color="#FF4B4B" size="18"></i>
+                    Immeuble N’DAH. Aldo. Route Tankpe Abomey-Calavi, Benin 
+                </p>
+                <p>Cotonou, Bénin</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook" color="white" size="20"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" color="white" size="20"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" color="white" size="20"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Collaboration Bénin-Japon. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
