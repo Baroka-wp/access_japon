@@ -95,161 +95,19 @@
         </section>
     </div>
 
-    <!-- Formulaire pour les volontaires -->
+   <!-- Modal pour les volontaires -->
     <div id="volunteerModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div id="volunteerForm" class="multi-step-form">
-                <div class="step-indicator">
-                    <div class="step active" data-step="1">1</div>
-                    <div class="step" data-step="2">2</div>
-                    <div class="step" data-step="3">3</div>
-                    <div class="step" data-step="4">4</div>
-                </div>
-    
-                <div class="form-step active" data-step="1">
-                    <h3 data-i18n="volunteer.personalInfo">Informations personnelles</h3>
-                    <div class="form-group">
-                        <label for="volunteerName" data-i18n="volunteer.name">Nom complet</label>
-                        <input type="text" id="volunteerName" name="volunteerName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="volunteerBirthdate" data-i18n="volunteer.birthdate">Date de naissance</label>
-                        <input type="date" id="volunteerBirthdate" name="volunteerBirthdate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="volunteerNationality" data-i18n="volunteer.nationality">Nationalité</label>
-                        <input type="text" id="volunteerNationality" name="volunteerNationality" required>
-                    </div>
-                </div>
-    
-                <div class="form-step" data-step="2">
-                    <h3 data-i18n="volunteer.languageSkills">Compétences linguistiques</h3>
-                    <div class="form-group">
-                        <label for="volunteerJapaneseLevel" data-i18n="volunteer.japaneseLevel">Niveau de japonais</label>
-                        <select id="volunteerJapaneseLevel" name="volunteerJapaneseLevel" required>
-                            <option value="" data-i18n="volunteer.selectLevel">Sélectionnez votre niveau</option>
-                            <option value="native" data-i18n="volunteer.nativeLevel">Langue maternelle</option>
-                            <option value="fluent" data-i18n="volunteer.fluentLevel">Courant</option>
-                            <option value="advanced" data-i18n="volunteer.advancedLevel">Avancé</option>
-                            <option value="intermediate" data-i18n="volunteer.intermediateLevel">Intermédiaire</option>
-                            <option value="beginner" data-i18n="volunteer.beginnerLevel">Débutant</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="volunteerOtherLanguages" data-i18n="volunteer.otherLanguages">Autres langues parlées</label>
-                        <input type="text" id="volunteerOtherLanguages" name="volunteerOtherLanguages">
-                    </div>
-                </div>
-    
-                <div class="form-step" data-step="3">
-                    <h3 data-i18n="volunteer.experienceMotivation">Expérience et motivation</h3>
-                    <div class="form-group">
-                        <label for="volunteerExperience" data-i18n="volunteer.teachingExperience">Expérience d'enseignement ou de bénévolat</label>
-                        <textarea id="volunteerExperience" name="volunteerExperience" rows="4" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="volunteerMotivation" data-i18n="volunteer.programMotivation">Motivation pour participer au programme</label>
-                        <textarea id="volunteerMotivation" name="volunteerMotivation" rows="4" required></textarea>
-                    </div>
-                </div>
-    
-                <div class="form-step" data-step="4">
-                    <h3 data-i18n="volunteer.contactInfo">Coordonnées</h3>
-                    <div class="form-group">
-                        <label for="volunteerEmail" data-i18n="volunteer.email">Email</label>
-                        <input type="email" id="volunteerEmail" name="volunteerEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="volunteerPhone" data-i18n="volunteer.phone">Téléphone</label>
-                        <input type="tel" id="volunteerPhone" name="volunteerPhone" required>
-                    </div>
-                </div>
-    
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" id="volunteerPrevBtn" data-i18n="form.previous">Précédent</button>
-                    <button type="button" class="btn btn-primary" id="volunteerNextBtn" data-i18n="form.next">Suivant</button>
-                    <button type="submit" class="btn btn-success" id="volunteerSubmitBtn" style="display: none;" data-i18n="form.submit">Soumettre</button>
-                </div>
-            </div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_575WphiPaFA0pSZp4Xzz-l5tmVae8q94sI-U_Nu6Ec8T9g/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>            <button id="closeVolunteerModal" class="btn btn-secondary">Fermer</button>
         </div>
     </div>
 
-    <!-- Formulaire pour les hôtes -->
+    <!-- Modal pour les hôtes -->
     <div id="hostModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div id="hostForm" class="multi-step-form">
-                <div class="step-indicator">
-                    <div class="step active" data-step="1">1</div>
-                    <div class="step" data-step="2">2</div>
-                    <div class="step" data-step="3">3</div>
-                    <div class="step" data-step="4">4</div>
-                </div>
-    
-                <div class="form-step active" data-step="1">
-                    <h3 data-i18n="host.form.familyInfo">Informations sur la famille d'accueil</h3>
-                    <div class="form-group">
-                        <label for="hostName" data-i18n="host.form.familyName">Nom de famille</label>
-                        <input type="text" id="hostName" name="hostName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hostCountry" data-i18n="host.form.country">Pays</label>
-                        <input type="text" id="hostCountry" name="hostCountry" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hostCity" data-i18n="host.form.city">Ville</label>
-                        <input type="text" id="hostCity" name="hostCity" required>
-                    </div>
-                </div>
-    
-                <div class="form-step" data-step="2">
-                    <h3 data-i18n="host.form.familyComposition">Composition de la famille</h3>
-                    <div class="form-group">
-                        <label for="hostFamilyMembers" data-i18n="host.form.familyMembers">Nombre de membres de la famille</label>
-                        <input type="number" id="hostFamilyMembers" name="hostFamilyMembers" min="1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hostAccommodation" data-i18n="host.form.accommodationType">Type de logement</label>
-                        <select id="hostAccommodation" name="hostAccommodation" required>
-                            <option value="" data-i18n="host.form.selectAccommodation">Sélectionnez le type de logement</option>
-                            <option value="house" data-i18n="host.form.house">Maison</option>
-                            <option value="apartment" data-i18n="host.form.apartment">Appartement</option>
-                            <option value="other" data-i18n="host.form.other">Autre</option>
-                        </select>
-                    </div>
-                </div>
-    
-                <div class="form-step" data-step="3">
-                    <h3 data-i18n="host.form.experienceInterests">Expérience et intérêts</h3>
-                    <div class="form-group">
-                        <label for="hostExperience" data-i18n="host.form.previousExperience">Expérience d'accueil précédente</label>
-                        <textarea id="hostExperience" name="hostExperience" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="hostInterests" data-i18n="host.form.japaneseInterests">Intérêts pour la culture japonaise</label>
-                        <textarea id="hostInterests" name="hostInterests" rows="4" required></textarea>
-                    </div>
-                </div>
-    
-                <div class="form-step" data-step="4">
-                    <h3 data-i18n="host.form.contactInfo">Coordonnées</h3>
-                    <div class="form-group">
-                        <label for="hostEmail" data-i18n="host.form.email">Email</label>
-                        <input type="email" id="hostEmail" name="hostEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hostPhone" data-i18n="host.form.phone">Téléphone</label>
-                        <input type="tel" id="hostPhone" name="hostPhone" required>
-                    </div>
-                </div>
-    
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" id="hostPrevBtn" data-i18n="form.previous">Précédent</button>
-                    <button type="button" class="btn btn-primary" id="hostNextBtn" data-i18n="form.next">Suivant</button>
-                    <button type="submit" class="btn btn-success" id="hostSubmitBtn" style="display: none;" data-i18n="form.submit">Soumettre</button>
-                </div>
-            </div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2Kp6txVo2Ff8V5kYhG9DbN65kf0dG2V1Ps320ktNEqPKvbQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>            <button id="closeHostModal" class="btn btn-secondary">Fermer</button>
         </div>
     </div>
 
@@ -266,6 +124,26 @@
             </div>
         </div>
     </div>
+
+        <!-- Icône flottante Calendly -->
+        <div id="calendlyFloatingIcon" class="floating-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+        </div>
+    
+        <!-- Modal pour Calendly (comme précédemment) -->
+        <div id="calendlyModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="calendlyWidget" style="min-width:320px;height:630px;"></div>
+            </div>
+        </div>
+    
+    
 
     <footer id="contact" class="footer">
         <div class="footer-content">
@@ -295,9 +173,9 @@
             <div class="footer-section">
                 <h4 data-i18n="footer.follow-us">Suivez-nous</h4>
                 <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i data-lucide="facebook" color="white" size="20"></i></a>
-                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" color="white" size="20"></i></a>
-                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" color="white" size="20"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/AfricaSamurai" aria-label="Facebook"><i data-lucide="facebook" color="white" size="20"></i></a>
+                    <a target="_blank" href="#" aria-label="Twitter"><i data-lucide="twitter" color="white" size="20"></i></a>
+                    <a target="_blank" href="#" aria-label="Instagram"><i data-lucide="instagram" color="white" size="20"></i></a>
                 </div>
             </div>
         </div>
@@ -308,5 +186,8 @@
 
     <script src="script.js"></script>
     <script src="home-stay.js"></script>
+        <!-- Script Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    
 </body>
 </html>

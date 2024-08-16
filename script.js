@@ -234,9 +234,9 @@ const translations = {
         "common.process": "Process",
         "volunteer.condition1": "Be of Japanese nationality or a permanent resident in Japan",
         "volunteer.condition2": "Be at least 20 years old",
-        "volunteer.condition3": "Speak fluent Japanese",
+        "volunteer.condition3": "Speak fluent Japanese and English or French",
         "volunteer.condition4": "Have an interest in teaching and African culture",
-        "volunteer.condition5": "Be available for a stay of 3 to 12 months",
+        "volunteer.condition5": "Be available for a stay of 2 to 12 months",
         "volunteer.process1": "Online application submission",
         "volunteer.process2": "Initial interview (online)",
         "volunteer.process3": "Pre-departure training",
@@ -246,7 +246,7 @@ const translations = {
         "host.condition1": "Be a family or individual residing in Africa",
         "host.condition2": "Have adequate space to accommodate a guest",
         "host.condition3": "Be interested in Japanese culture",
-        "host.condition4": "Be ready to commit for a period of 3 to 12 months",
+        "host.condition4": "Be ready to commit for a period of 2 to 12 months",
         "host.process1": "Online application submission",
         "host.process2": "Home visit and evaluation",
         "host.process3": "Intercultural hosting training",
@@ -351,9 +351,9 @@ const translations = {
         "common.process": "Processus",
         "volunteer.condition1": "Être de nationalité japonaise ou résident permanent au Japon",
         "volunteer.condition2": "Avoir au moins 20 ans",
-        "volunteer.condition3": "Parler couramment japonais",
+        "volunteer.condition3": "Parler couramment japonais et Anglais ou Français",
         "volunteer.condition4": "Avoir un intérêt pour l'enseignement et la culture africaine",
-        "volunteer.condition5": "Être disponible pour un séjour de 3 à 12 mois",
+        "volunteer.condition5": "Être disponible pour un séjour de 2 à 12 mois",
         "volunteer.process1": "Soumission de la candidature en ligne",
         "volunteer.process2": "Entretien initial (en ligne)",
         "volunteer.process3": "Formation pré-départ",
@@ -363,7 +363,7 @@ const translations = {
         "host.condition1": "Être une famille ou un individu résidant en Afrique",
         "host.condition2": "Avoir un espace adéquat pour accueillir un invité",
         "host.condition3": "Être intéressé par la culture japonaise",
-        "host.condition4": "Être prêt à s'engager pour une période de 3 à 12 mois",
+        "host.condition4": "Être prêt à s'engager pour une période de 2 à 12 mois",
         "host.process1": "Soumission de la candidature en ligne",
         "host.process2": "Visite et évaluation du domicile",
         "host.process3": "Formation sur l'accueil interculturel",
@@ -468,9 +468,9 @@ const translations = {
         "common.process": "プロセス",
         "volunteer.condition1": "日本国籍または日本の永住者であること",
         "volunteer.condition2": "20歳以上であること",
-        "volunteer.condition3": "日本語が流暢であること",
+        "volunteer.condition3": "流暢な日本語と英語またはフランス語を話す",
         "volunteer.condition4": "教育とアフリカ文化に興味があること",
-        "volunteer.condition5": "3〜12ヶ月の滞在が可能であること",
+        "volunteer.condition5": "2〜12ヶ月の滞在が可能であること",
         "volunteer.process1": "オンライン申請書の提出",
         "volunteer.process2": "初回面接（オンライン）",
         "volunteer.process3": "出発前研修",
@@ -480,7 +480,7 @@ const translations = {
         "host.condition1": "アフリカに住む家族または個人であること",
         "host.condition2": "ゲストを受け入れるための適切なスペースがあること",
         "host.condition3": "日本文化に興味があること",
-        "host.condition4": "3〜12ヶ月の期間にコミットできること",
+        "host.condition4": "2〜12ヶ月の期間にコミットできること",
         "host.process1": "オンライン申請書の提出",
         "host.process2": "自宅訪問と評価",
         "host.process3": "異文化ホスティングに関する研修",
@@ -620,4 +620,47 @@ document.addEventListener('DOMContentLoaded', function () {
         thankYouMessage.style.zIndex = '10000';
         modal.appendChild(thankYouMessage);
     }
+});
+
+const url = 'https://calendly.com/baroka/connecting-meeting';
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById('calendlyModal');
+    var icon = document.getElementById('calendlyFloatingIcon');
+    var closeBtn = modal.querySelector('.close');
+
+    function openModal() {
+        modal.style.display = "block";
+        document.body.style.overflow = 'hidden'; // Empêche le défilement de la page derrière le modal
+        Calendly.initInlineWidget({
+            url: url,
+            parentElement: document.getElementById('calendlyWidget'),
+            prefill: {},
+            utm: {}
+        });
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto'; // Réactive le défilement de la page
+    }
+
+    icon.addEventListener('click', openModal);
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Ferme le modal si on clique en dehors du contenu du modal
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Ferme le modal si on appuie sur la touche Echap
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && modal.style.display === "block") {
+            closeModal();
+        }
+    });
 });
