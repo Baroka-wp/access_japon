@@ -59,96 +59,96 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('inscriptionModal');
-    const successModal = document.getElementById('successModal');
-    const openModalBtn = document.getElementById('openModalBtn');
-    const closeBtns = document.querySelectorAll('.close');
-    const form = document.getElementById('inscriptionForm');
-    const steps = Array.from(form.querySelectorAll('.form-step'));
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const submitBtn = document.getElementById('submitBtn');
-    const stepIndicators = document.querySelectorAll('.step');
-    let currentStep = 0;
+// document.addEventListener('DOMContentLoaded', function () {
+//     const modal = document.getElementById('inscriptionModal');
+//     const successModal = document.getElementById('successModal');
+//     const openModalBtn = document.getElementById('openModalBtn');
+//     const closeBtns = document.querySelectorAll('.close');
+//     const form = document.getElementById('inscriptionForm');
+//     const steps = Array.from(form.querySelectorAll('.form-step'));
+//     const nextBtn = document.getElementById('nextBtn');
+//     const prevBtn = document.getElementById('prevBtn');
+//     const submitBtn = document.getElementById('submitBtn');
+//     const stepIndicators = document.querySelectorAll('.step');
+//     let currentStep = 0;
 
-    function showStep(stepIndex) {
-        steps.forEach((step, index) => {
-            step.classList.toggle('active', index === stepIndex);
-        });
-        stepIndicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === stepIndex);
-            indicator.classList.toggle('completed', index < stepIndex);
-        });
-        prevBtn.style.display = stepIndex === 0 ? 'none' : 'inline-block';
-        if (stepIndex === steps.length - 1) {
-            nextBtn.style.display = 'none';
-            submitBtn.style.display = 'inline-block';
-        } else {
-            nextBtn.style.display = 'inline-block';
-            submitBtn.style.display = 'none';
-        }
-    }
+//     function showStep(stepIndex) {
+//         steps.forEach((step, index) => {
+//             step.classList.toggle('active', index === stepIndex);
+//         });
+//         stepIndicators.forEach((indicator, index) => {
+//             indicator.classList.toggle('active', index === stepIndex);
+//             indicator.classList.toggle('completed', index < stepIndex);
+//         });
+//         prevBtn.style.display = stepIndex === 0 ? 'none' : 'inline-block';
+//         if (stepIndex === steps.length - 1) {
+//             nextBtn.style.display = 'none';
+//             submitBtn.style.display = 'inline-block';
+//         } else {
+//             nextBtn.style.display = 'inline-block';
+//             submitBtn.style.display = 'none';
+//         }
+//     }
 
-    function validateStep(stepIndex) {
-        const inputs = steps[stepIndex].querySelectorAll('input, textarea');
-        return Array.from(inputs).every(input => input.checkValidity());
-    }
+//     function validateStep(stepIndex) {
+//         const inputs = steps[stepIndex].querySelectorAll('input, textarea');
+//         return Array.from(inputs).every(input => input.checkValidity());
+//     }
 
-    nextBtn.addEventListener('click', function () {
-        if (validateStep(currentStep)) {
-            currentStep++;
-            showStep(currentStep);
-        } else {
-            alert('Veuillez remplir tous les champs obligatoires avant de continuer.');
-        }
-    });
+//     nextBtn.addEventListener('click', function () {
+//         if (validateStep(currentStep)) {
+//             currentStep++;
+//             showStep(currentStep);
+//         } else {
+//             alert('Veuillez remplir tous les champs obligatoires avant de continuer.');
+//         }
+//     });
 
-    prevBtn.addEventListener('click', function () {
-        currentStep--;
-        showStep(currentStep);
-    });
+//     prevBtn.addEventListener('click', function () {
+//         currentStep--;
+//         showStep(currentStep);
+//     });
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (validateStep(currentStep)) {
-            // Simuler l'envoi du formulaire (remplacer par l'envoi réel des données)
-            setTimeout(() => {
-                modal.style.display = "none";
-                successModal.style.display = "block";
-                // Réinitialiser le formulaire après la soumission
-                form.reset();
-                currentStep = 0;
-                showStep(currentStep);
-            }, 1000);
-        } else {
-            alert('Veuillez remplir tous les champs obligatoires avant de soumettre.');
-        }
-    });
+//     form.addEventListener('submit', function (e) {
+//         e.preventDefault();
+//         if (validateStep(currentStep)) {
+//             // Simuler l'envoi du formulaire (remplacer par l'envoi réel des données)
+//             setTimeout(() => {
+//                 modal.style.display = "none";
+//                 successModal.style.display = "block";
+//                 // Réinitialiser le formulaire après la soumission
+//                 form.reset();
+//                 currentStep = 0;
+//                 showStep(currentStep);
+//             }, 1000);
+//         } else {
+//             alert('Veuillez remplir tous les champs obligatoires avant de soumettre.');
+//         }
+//     });
 
-    openModalBtn.onclick = function () {
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
-    }
+//     openModalBtn.onclick = function () {
+//         modal.style.display = "block";
+//         document.body.style.overflow = "hidden";
+//     }
 
-    closeBtns.forEach(btn => {
-        btn.onclick = function () {
-            modal.style.display = "none";
-            successModal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    });
+//     closeBtns.forEach(btn => {
+//         btn.onclick = function () {
+//             modal.style.display = "none";
+//             successModal.style.display = "none";
+//             document.body.style.overflow = "auto";
+//         }
+//     });
 
-    window.onclick = function (event) {
-        if (event.target == modal || event.target == successModal) {
-            modal.style.display = "none";
-            successModal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    }
+//     window.onclick = function (event) {
+//         if (event.target == modal || event.target == successModal) {
+//             modal.style.display = "none";
+//             successModal.style.display = "none";
+//             document.body.style.overflow = "auto";
+//         }
+//     }
 
-    showStep(currentStep);
-});
+//     showStep(currentStep);
+// });
 
 // Step 1: Create language files
 const translations = {
@@ -554,3 +554,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById('formModal');
+    var btn = document.getElementById('openFormModal');
+    var span = document.getElementsByClassName('close')[0];
+    var iframe = document.getElementById('googleForm');
+    var closeBtn = document.getElementById('closeModal');
+
+    btn.onclick = function () {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        startCheckingFormSubmission();
+    }
+
+    span.onclick = closeModal;
+    closeBtn.onclick = closeModal;
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        iframe.src = iframe.src; // Recharge l'iframe pour réinitialiser le formulaire
+        stopCheckingFormSubmission();
+    }
+
+    var checkInterval;
+
+    function startCheckingFormSubmission() {
+        checkInterval = setInterval(checkFormSubmission, 1000); // Vérifie toutes les secondes
+    }
+
+    function stopCheckingFormSubmission() {
+        clearInterval(checkInterval);
+    }
+
+    function checkFormSubmission() {
+        try {
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            if (iframeDocument.body.innerHTML.includes("Votre réponse a été enregistrée.")) {
+                showThankYouMessage();
+                setTimeout(closeModal, 3000); // Ferme le modal après 3 secondes
+                stopCheckingFormSubmission();
+            }
+        } catch (e) {
+            console.log("Erreur lors de la vérification de la soumission du formulaire:", e);
+        }
+    }
+
+    function showThankYouMessage() {
+        var thankYouMessage = document.createElement('div');
+        thankYouMessage.textContent = "Merci pour votre inscription ! Le formulaire va se fermer dans quelques secondes.";
+        thankYouMessage.style.position = 'absolute';
+        thankYouMessage.style.top = '10px';
+        thankYouMessage.style.left = '50%';
+        thankYouMessage.style.transform = 'translateX(-50%)';
+        thankYouMessage.style.backgroundColor = '#4CAF50';
+        thankYouMessage.style.color = 'white';
+        thankYouMessage.style.padding = '10px';
+        thankYouMessage.style.borderRadius = '5px';
+        thankYouMessage.style.zIndex = '10000';
+        modal.appendChild(thankYouMessage);
+    }
+});
