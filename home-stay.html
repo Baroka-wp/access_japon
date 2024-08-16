@@ -45,42 +45,42 @@
         </div>
 
         <div id="volunteers" class="toggle-content active">
-            <h3>Conditions</h3>
+            <h3 data-i18n="common.conditions">Conditions</h3>
             <ul>
-                <li>Être de nationalité japonaise ou résident permanent au Japon</li>
-                <li>Avoir au moins 20 ans</li>
-                <li>Parler couramment japonais</li>
-                <li>Avoir un intérêt pour l'enseignement et la culture africaine</li>
-                <li>Être disponible pour un séjour de 3 à 12 mois</li>
+                <li data-i18n="volunteer.condition1">Être de nationalité japonaise ou résident permanent au Japon</li>
+                <li data-i18n="volunteer.condition2">Avoir au moins 20 ans</li>
+                <li data-i18n="volunteer.condition3">Parler couramment japonais</li>
+                <li data-i18n="volunteer.condition4">Avoir un intérêt pour l'enseignement et la culture africaine</li>
+                <li data-i18n="volunteer.condition5">Être disponible pour un séjour de 3 à 12 mois</li>
             </ul>
-            <h3>Processus</h3>
+            <h3 data-i18n="common.process">Processus</h3>
             <ol>
-                <li>Soumission de la candidature en ligne</li>
-                <li>Entretien initial (en ligne)</li>
-                <li>Formation pré-départ</li>
-                <li>Placement dans une famille d'accueil africaine</li>
-                <li>Suivi et soutien pendant le séjour</li>
+                <li data-i18n="volunteer.process1">Soumission de la candidature en ligne</li>
+                <li data-i18n="volunteer.process2">Entretien initial (en ligne)</li>
+                <li data-i18n="volunteer.process3">Formation pré-départ</li>
+                <li data-i18n="volunteer.process4">Placement dans une famille d'accueil africaine</li>
+                <li data-i18n="volunteer.process5">Suivi et soutien pendant le séjour</li>
             </ol>
-            <button class="apply-button" id="openVolunteerModal">Postuler comme volontaire</button>
+            <button class="apply-button" id="openVolunteerModal" data-i18n="volunteer.apply">Postuler comme volontaire</button>
         </div>
-
+        
         <div id="hosts" class="toggle-content">
-            <h3>Conditions</h3>
+            <h3 data-i18n="common.conditions">Conditions</h3>
             <ul>
-                <li>Être une famille ou un individu résidant en Afrique</li>
-                <li>Avoir un espace adéquat pour accueillir un invité</li>
-                <li>Être intéressé par la culture japonaise</li>
-                <li>Être prêt à s'engager pour une période de 3 à 12 mois</li>
+                <li data-i18n="host.condition1">Être une famille ou un individu résidant en Afrique</li>
+                <li data-i18n="host.condition2">Avoir un espace adéquat pour accueillir un invité</li>
+                <li data-i18n="host.condition3">Être intéressé par la culture japonaise</li>
+                <li data-i18n="host.condition4">Être prêt à s'engager pour une période de 3 à 12 mois</li>
             </ul>
-            <h3>Processus</h3>
+            <h3 data-i18n="common.process">Processus</h3>
             <ol>
-                <li>Soumission de la candidature en ligne</li>
-                <li>Visite et évaluation du domicile</li>
-                <li>Formation sur l'accueil interculturel</li>
-                <li>Jumelage avec un volontaire japonais</li>
-                <li>Accueil du volontaire et suivi régulier</li>
+                <li data-i18n="host.process1">Soumission de la candidature en ligne</li>
+                <li data-i18n="host.process2">Visite et évaluation du domicile</li>
+                <li data-i18n="host.process3">Formation sur l'accueil interculturel</li>
+                <li data-i18n="host.process4">Jumelage avec un volontaire japonais</li>
+                <li data-i18n="host.process5">Accueil du volontaire et suivi régulier</li>
             </ol>
-        <button href="#" class="apply-button" id="openHostModal">Devenir famille d'accueil</button>
+            <button href="#" class="apply-button" id="openHostModal" data-i18n="host.apply">Devenir famille d'accueil</button>
         </div>
 
         <section class="home-stay-section">
@@ -186,68 +186,68 @@
                     <div class="step" data-step="3">3</div>
                     <div class="step" data-step="4">4</div>
                 </div>
-
+    
                 <div class="form-step active" data-step="1">
-                    <h3>Informations sur la famille d'accueil</h3>
+                    <h3 data-i18n="host.form.familyInfo">Informations sur la famille d'accueil</h3>
                     <div class="form-group">
-                        <label for="hostName">Nom de famille</label>
+                        <label for="hostName" data-i18n="host.form.familyName">Nom de famille</label>
                         <input type="text" id="hostName" name="hostName" required>
                     </div>
                     <div class="form-group">
-                        <label for="hostCountry">Pays</label>
+                        <label for="hostCountry" data-i18n="host.form.country">Pays</label>
                         <input type="text" id="hostCountry" name="hostCountry" required>
                     </div>
                     <div class="form-group">
-                        <label for="hostCity">Ville</label>
+                        <label for="hostCity" data-i18n="host.form.city">Ville</label>
                         <input type="text" id="hostCity" name="hostCity" required>
                     </div>
                 </div>
-
+    
                 <div class="form-step" data-step="2">
-                    <h3>Composition de la famille</h3>
+                    <h3 data-i18n="host.form.familyComposition">Composition de la famille</h3>
                     <div class="form-group">
-                        <label for="hostFamilyMembers">Nombre de membres de la famille</label>
+                        <label for="hostFamilyMembers" data-i18n="host.form.familyMembers">Nombre de membres de la famille</label>
                         <input type="number" id="hostFamilyMembers" name="hostFamilyMembers" min="1" required>
                     </div>
                     <div class="form-group">
-                        <label for="hostAccommodation">Type de logement</label>
+                        <label for="hostAccommodation" data-i18n="host.form.accommodationType">Type de logement</label>
                         <select id="hostAccommodation" name="hostAccommodation" required>
-                            <option value="">Sélectionnez le type de logement</option>
-                            <option value="house">Maison</option>
-                            <option value="apartment">Appartement</option>
-                            <option value="other">Autre</option>
+                            <option value="" data-i18n="host.form.selectAccommodation">Sélectionnez le type de logement</option>
+                            <option value="house" data-i18n="host.form.house">Maison</option>
+                            <option value="apartment" data-i18n="host.form.apartment">Appartement</option>
+                            <option value="other" data-i18n="host.form.other">Autre</option>
                         </select>
                     </div>
                 </div>
-
+    
                 <div class="form-step" data-step="3">
-                    <h3>Expérience et intérêts</h3>
+                    <h3 data-i18n="host.form.experienceInterests">Expérience et intérêts</h3>
                     <div class="form-group">
-                        <label for="hostExperience">Expérience d'accueil précédente</label>
+                        <label for="hostExperience" data-i18n="host.form.previousExperience">Expérience d'accueil précédente</label>
                         <textarea id="hostExperience" name="hostExperience" rows="4"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="hostInterests">Intérêts pour la culture japonaise</label>
+                        <label for="hostInterests" data-i18n="host.form.japaneseInterests">Intérêts pour la culture japonaise</label>
                         <textarea id="hostInterests" name="hostInterests" rows="4" required></textarea>
                     </div>
                 </div>
-
+    
                 <div class="form-step" data-step="4">
-                    <h3>Coordonnées</h3>
+                    <h3 data-i18n="host.form.contactInfo">Coordonnées</h3>
                     <div class="form-group">
-                        <label for="hostEmail">Email</label>
+                        <label for="hostEmail" data-i18n="host.form.email">Email</label>
                         <input type="email" id="hostEmail" name="hostEmail" required>
                     </div>
                     <div class="form-group">
-                        <label for="hostPhone">Téléphone</label>
+                        <label for="hostPhone" data-i18n="host.form.phone">Téléphone</label>
                         <input type="tel" id="hostPhone" name="hostPhone" required>
                     </div>
                 </div>
-
+    
                 <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" id="hostPrevBtn">Précédent</button>
-                    <button type="button" class="btn btn-primary" id="hostNextBtn">Suivant</button>
-                    <button type="submit" class="btn btn-success" id="hostSubmitBtn" style="display: none;">Soumettre</button>
+                    <button type="button" class="btn btn-secondary" id="hostPrevBtn" data-i18n="form.previous">Précédent</button>
+                    <button type="button" class="btn btn-primary" id="hostNextBtn" data-i18n="form.next">Suivant</button>
+                    <button type="submit" class="btn btn-success" id="hostSubmitBtn" style="display: none;" data-i18n="form.submit">Soumettre</button>
                 </div>
             </div>
         </div>

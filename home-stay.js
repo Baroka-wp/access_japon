@@ -125,3 +125,4 @@ document.getElementById('openHostModal').onclick = function (e) {
     e.preventDefault();
     hostModal.style.display = "block";
 };
+
