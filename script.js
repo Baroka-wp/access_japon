@@ -288,7 +288,7 @@ const translations = {
         "join-us.title": "S'inscrire aux cours de langue Japonaise",
         "join-us.description": "Développez vos compétences en langue japonaise, et ouvrez-vous à de nouvelles opportunités professionnelles.",
         "join-us.button": "S'inscrire maintenant",
-        "join-us.button.fomo": "S'inscrire maintenant | Plus que 15 places",
+        "join-us.button.fomo": "S'inscrire gratuitement | -15 places Gratuites",
         "team.title": "Notre Équipe",
         "team.member1.name": "阪本琴音(Kotone Sakamoto)",
         "team.member1.role": "Correspondante Japonaise",
