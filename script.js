@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
     en: {
         "nav.home": "Home",
-        "nav.presentation": "Presentation",
+        "nav.presentation": "About Africa Samurai",
         "nav.join-us": "Training",
         "nav.team": "Team",
         "nav.contact": "Contact",
@@ -269,11 +269,12 @@ const translations = {
         "host.form.japaneseInterests": "Interests in Japanese culture",
         "host.form.contactInfo": "Contact Information",
         "host.form.email": "Email",
-        "host.form.phone": "Phone"
+        "host.form.phone": "Phone",
+        "footer.website": "Visite Africa samurai website"
     },
     fr: {
         "nav.home": "Accueil",
-        "nav.presentation": "Présentation",
+        "nav.presentation": "A propos de Africa Samurai",
         "nav.join-us": "Formation",
         "nav.team": "L'équipe",
         "nav.contact": "Contact",
@@ -387,11 +388,12 @@ const translations = {
         "host.form.japaneseInterests": "Intérêts pour la culture japonaise",
         "host.form.contactInfo": "Coordonnées",
         "host.form.email": "Email",
-        "host.form.phone": "Téléphone"
+        "host.form.phone": "Téléphone",
+        "footer.website": "Visiter le site web de Africa samurai"
     },
     jp: {
         "nav.home": "ホーム",
-        "nav.presentation": "紹介",
+        "nav.presentation": "アフリカサムライについて",
         "nav.join-us": "トレーニング",
         "nav.team": "チーム",
         "nav.contact": "お問い合わせ",
@@ -505,6 +507,7 @@ const translations = {
         "host.form.contactInfo": "連絡先情報",
         "host.form.email": "メールアドレス",
         "host.form.phone": "電話番号",
+        "footer.website": "アフリカサムライのウェブサイトにアクセスしてください"
     }
 };
 
